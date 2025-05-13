@@ -1,0 +1,224 @@
+/* src/app/components/user-details/user-details.component.scss */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  margin-bottom: 20px;
+  h2 {
+    color: #005c8f;
+    margin-bottom: 5px;
+    font-size: 24px;
+  }
+  .subtitle {
+    color: #666;
+    font-size: 14px;
+    margin-top: 0;
+  }
+}
+
+.user-details-container {
+  background-color: #f3f9fc;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+
+  h3 {
+    color: #005c8f;
+    margin-top: 0;
+    font-size: 18px;
+  }
+
+  .form-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+}
+
+.form-group {
+  margin-bottom: 25px;
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+
+  .input-group {
+    display: flex;
+    gap: 10px;
+
+    input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      background-color: #f5f5f5;
+    }
+  }
+}
+
+.btn-consultar {
+  background-color: #ccc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: not-allowed;
+}
+
+.user-info-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.user-info-box {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  h4 {
+    color: #005c8f;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+
+  .info-subtitle {
+    color: #666;
+    font-size: 12px;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+}
+
+.info-status {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  .status-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-size: 14px;
+    color: white;
+
+    &.status-ok {
+      background-color: #4CAF50;
+    }
+  }
+
+  .status-text {
+    .status-name {
+      margin: 0;
+      font-size: 12px;
+      color: #666;
+    }
+
+    .status-value {
+      margin: 0;
+      font-weight: bold;
+      color: #333;
+    }
+  }
+}
+
+.info-account {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+
+  .icon-container {
+    margin-right: 10px;
+    .account-icon {
+      font-size: 20px;
+    }
+  }
+
+  .account-details {
+    flex: 1;
+
+    .account-number {
+      margin: 0;
+      font-size: 12px;
+      color: #666;
+    }
+
+    .account-value {
+      margin: 0;
+      font-weight: bold;
+      color: #333;
+    }
+  }
+
+  .btn-duplicate {
+    background-color: white;
+    color: #005c8f;
+    border: 1px solid #005c8f;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f0f7fc;
+    }
+  }
+}
+
+.footer {
+  margin-top: 30px;
+
+  .footer-actions {
+    display: flex;
+    justify-content: space-between;
+
+    .right-buttons {
+      display: flex;
+      gap: 10px;
+    }
+  }
+
+  .btn-dicas {
+    background-color: white;
+    color: #005c8f;
+    border: 1px solid #005c8f;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+
+    &:hover {
+      background-color: #f0f7fc;
+    }
+  }
+
+  .btn-iniciar {
+    background-color: #005c8f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+
+    &:hover {
+      background-color: #004972;
+    }
+  }
+}

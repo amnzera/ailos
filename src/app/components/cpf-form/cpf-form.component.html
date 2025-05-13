@@ -1,0 +1,47 @@
+<!-- src/app/components/cpf-form/cpf-form.component.html -->
+<div class="container">
+  <div class="header">
+    <h2>NOVA ADMISSÃO COOPERADO</h2>
+    <p class="subtitle">Cadastro / Admissão do Cooperado / Nova Admissão de Cooperado</p>
+  </div>
+
+  <app-progress-stepper [currentStep]="1"></app-progress-stepper>
+
+  <div class="cpf-form-container">
+    <h3>Informe o CPF do futuro cooperado (a)</h3>
+    <p class="form-description">
+      Se necessário, você poderá duplicar uma conta existente ou pausar e retomar esse cadastro futuramente.<br>
+      Digite apenas os números (sem pontos ou traços).
+    </p>
+
+    <form [formGroup]="cpfForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="cpf">CPF</label>
+        <div class="input-group">
+          <input
+            type="text"
+            id="cpf"
+            formControlName="cpf"
+            placeholder="000.000.000-00"
+            maxlength="14"
+            (blur)="formatCpfInput()"
+          >
+          <button
+            type="submit"
+            class="btn-consultar"
+            [disabled]="cpfForm.invalid || loading"
+          >
+            Consultar por CPF
+          </button>
+        </div>
+        <div class="error-message" *ngIf="errorMessage">
+          {{ errorMessage }}
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="footer">
+    <button class="btn-dicas">Dicas para admissão</button>
+  </div>
+</div>

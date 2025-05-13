@@ -1,0 +1,15 @@
+<!-- src/app/components/progress-stepper/progress-stepper.component.html -->
+<div class="stepper-container">
+  <div class="stepper">
+    <div class="stepper-line"></div>
+    <div class="steps">
+      <div *ngFor="let step of steps; let i = index" class="step">
+        <div class="step-circle" [ngClass]="{'active': step.active, 'current': i === currentStep - 1}">
+          <span *ngIf="i < currentStep - 1" class="check-icon">✓</span>
+          <span *ngIf="i >= currentStep - 1">{{i + 1}}</span>
+        </div>
+        <div class="step-label">{{ step.name }}</div>
+      </div>
+    </div>
+  </div>
+</div>

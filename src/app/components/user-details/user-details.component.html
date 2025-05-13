@@ -1,0 +1,97 @@
+<!-- src/app/components/user-details/user-details.component.html -->
+<div class="container" *ngIf="user">
+  <div class="header">
+    <h2>NOVA ADMISSÃO COOPERADO</h2>
+    <p class="subtitle">Cadastro / Admissão do Cooperado / Nova Admissão de Cooperado</p>
+  </div>
+
+  <app-progress-stepper [currentStep]="2"></app-progress-stepper>
+
+  <div class="user-details-container">
+    <h3>Informe o CPF do futuro cooperado (a)</h3>
+    <p class="form-description">
+      Se necessário, você poderá duplicar uma conta existente ou pausar e retomar esse cadastro futuramente.<br>
+      Digite apenas os números (sem pontos ou traços).
+    </p>
+
+    <div class="form-group">
+      <label for="cpf">CPF</label>
+      <div class="input-group">
+        <input
+          type="text"
+          id="cpf"
+          [value]="user.cpf"
+          disabled
+        >
+        <button class="btn-consultar" disabled>
+          Consultar por CPF
+        </button>
+      </div>
+    </div>
+
+    <div class="user-info-container">
+      <div class="user-info-box">
+        <h4>Situação cadastral do CPF</h4>
+        <p class="info-subtitle">Consulta na Receita Federal</p>
+
+        <div class="info-status">
+          <span class="status-icon" [class.status-ok]="user.situacaoCadastral === 'Regular'">✓</span>
+          <div class="status-text">
+            <p class="status-name">Nome</p>
+            <p class="status-value">{{ user.nome }}</p>
+          </div>
+        </div>
+
+        <div class="info-status">
+          <span class="status-icon" [class.status-ok]="user.situacaoCadastral === 'Regular'">✓</span>
+          <div class="status-text">
+            <p class="status-name">Situação do CPF</p>
+            <p class="status-value">{{ user.situacaoCadastral }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="user-info-box">
+        <h4>Conta aplicação</h4>
+        <p class="info-subtitle">Cooperativa Viacredi</p>
+
+        <div class="info-account">
+          <div class="icon-container">
+            <span class="account-icon">💰</span>
+          </div>
+          <div class="account-details">
+            <p class="account-number">Número da conta</p>
+            <p class="account-value">{{ user.contaAplicacao.numeroConta }}</p>
+          </div>
+          <button class="btn-duplicate">Duplicar conta</button>
+        </div>
+      </div>
+
+      <div class="user-info-box">
+        <h4>Conta corrente</h4>
+        <p class="info-subtitle">Cooperativa Viacredi</p>
+
+        <div class="info-account">
+          <div class="icon-container">
+            <span class="account-icon">💳</span>
+          </div>
+          <div class="account-details">
+            <p class="account-number">Número da conta</p>
+            <p class="account-value">{{ user.contaCorrente.numeroConta }}</p>
+          </div>
+          <button class="btn-duplicate">Duplicar conta</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-actions">
+      <button class="btn-dicas">Dicas para admissão</button>
+      <div class="right-buttons">
+        <button class="btn-iniciar" (click)="iniciarNovaAdmissao()">Iniciar nova admissão</button>
+        <button class="btn-dicas">Dicas para admissão</button>
+      </div>
+    </div>
+  </div>
+</div>

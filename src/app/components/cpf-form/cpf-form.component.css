@@ -1,0 +1,108 @@
+/* src/app/components/cpf-form/cpf-form.component.scss */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  margin-bottom: 20px;
+  h2 {
+    color: #005c8f;
+    margin-bottom: 5px;
+    font-size: 24px;
+  }
+  .subtitle {
+    color: #666;
+    font-size: 14px;
+    margin-top: 0;
+  }
+}
+
+.cpf-form-container {
+  background-color: #f3f9fc;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+
+  h3 {
+    color: #005c8f;
+    margin-top: 0;
+    font-size: 18px;
+  }
+
+  .form-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+}
+
+.form-group {
+  margin-bottom: 15px;
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+
+  .input-group {
+    display: flex;
+    gap: 10px;
+
+    input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+  }
+
+  .error-message {
+    color: #d9534f;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+}
+
+.btn-consultar {
+  background-color: #005c8f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+
+  &:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+  &:hover:not(:disabled) {
+    background-color: #004972;
+  }
+}
+
+.footer {
+  text-align: left;
+  margin-top: 30px;
+
+  .btn-dicas {
+    background-color: white;
+    color: #005c8f;
+    border: 1px solid #005c8f;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+
+    &:hover {
+      background-color: #f0f7fc;
+    }
+  }
+}
