@@ -11,7 +11,7 @@
 
 .stepper-line {
   position: absolute;
-  top: 30px;
+  top: 15px;
   left: 40px;
   right: 40px;
   height: 2px;
@@ -37,8 +37,8 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: white;
-  border: 2px solid #e0e0e0;
+  background-color: #C6CED1;
+  border: 2px solid #C6CED1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,14 +47,14 @@
 }
 
 .step-circle.active {
-  background-color: #4CAF50;
-  border-color: #4CAF50;
+  background-color: #C6CED1;
+  border-color: #C6CED1;
   color: white;
 }
 
 .step-circle.current {
-  border-color: #4CAF50;
-  color: #4CAF50;
+  border-color: #165C7D;
+  color: #165C7D;
 }
 
 .step-label {

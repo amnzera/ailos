@@ -1,0 +1,124 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70px;
+  height: 100vh;
+  background-color: #145E7E;
+  color: white;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  width: 48px;
+  max-width: 100%;
+  height: auto;
+  margin: 1rem auto;
+  display: block;
+}
+
+
+.menu-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  cursor: pointer;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20px;
+  height: 16px;
+
+  .line {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    border-radius: 1px;
+  }
+}
+
+.navigation {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  &.active {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.nav-icon {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.nav-label {
+  font-size: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar.expanded {
+  width: 180px;
+
+  .nav-item {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
+
+  .nav-icon {
+    margin-right: 15px;
+    margin-bottom: 0;
+  }
+
+  .nav-label {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.icon-search:before {
+  content: "\1F50D";
+}
+.icon-star:before {
+  content: "\2605";
+}
+.icon-message-square:before {
+  content: "\1F4AC";
+}
+.icon-sliders:before {
+  content: "\2630";
+}
+.icon-building:before {
+  content: "\1F3E2";
+}

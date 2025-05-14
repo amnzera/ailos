@@ -1,0 +1,26 @@
+<div class="sidebar">
+<img ngSrc="/assets/img/logo.png" alt="Logo" class="logo" width="268" height="268" priority>
+  <div class="menu-toggle">
+    <div class="hamburger-icon">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </div>
+
+  <nav class="navigation">
+    <ul class="nav-list">
+      <li
+        *ngFor="let item of navItems"
+        class="nav-item"
+        [routerLink]="item.route"
+        routerLinkActive="active"
+      >
+        <div class="nav-icon">
+          <i [class]="'icon-' + item.icon"></i>
+        </div>
+        <span class="nav-label">{{ item.label }}</span>
+      </li>
+    </ul>
+  </nav>
+</div>
