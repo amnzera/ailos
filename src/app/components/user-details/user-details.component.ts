@@ -1,8 +1,7 @@
-// src/app/components/user-details/user-details.component.ts
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { UserService } from '../../services/user.service';
-import { User } from '../../models/user.model';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {UserService} from '../../services/user.service';
+import {User} from '../../models/user.model';
 
 @Component({
   selector: 'app-user-details',
@@ -21,14 +20,12 @@ export class UserDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.user = this.userService.getCurrentUser();
 
-    // Se não houver usuário, redirecionamos para a página inicial
     if (!this.user) {
       this.router.navigate(['/']);
     }
   }
 
   iniciarNovaAdmissao(): void {
-    // Limpa o usuário atual e redireciona para a página inicial
     this.userService.setCurrentUser(null);
     this.router.navigate(['/']);
   }

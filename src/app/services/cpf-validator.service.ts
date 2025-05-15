@@ -1,19 +1,14 @@
-// src/app/services/cpf-validator.service.ts
-import { Injectable } from '@angular/core';
-import { CpfValidationResult } from '../models/cpf-validation-result.model';
+import {Injectable} from '@angular/core';
+import {CpfValidationResult} from '../models/cpf-validation-result.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CpfValidatorService {
 
-  constructor() { }
-
   validateCpf(cpf: string): CpfValidationResult {
-    // Remove não-dígitos
     const cpfClean = cpf.replace(/\D/g, '');
 
-    // Verifica se tem 11 dígitos
     if (cpfClean.length !== 11) {
       return {
         isValid: false,
@@ -21,7 +16,6 @@ export class CpfValidatorService {
       };
     }
 
-    // Verifica se todos os dígitos são iguais
     if (/^(\d)\1{10}$/.test(cpfClean)) {
       return {
         isValid: false,
@@ -29,7 +23,6 @@ export class CpfValidatorService {
       };
     }
 
-    // Validação do primeiro dígito verificador
     let soma = 0;
     for (let i = 0; i < 9; i++) {
       soma += parseInt(cpfClean.charAt(i)) * (10 - i);
@@ -45,7 +38,6 @@ export class CpfValidatorService {
       };
     }
 
-    // Validação do segundo dígito verificador
     soma = 0;
     for (let i = 0; i < 10; i++) {
       soma += parseInt(cpfClean.charAt(i)) * (11 - i);

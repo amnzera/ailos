@@ -1,9 +1,6 @@
-<!-- src/app/components/cpf-form/cpf-form.component.html -->
+<main>
+
 <div class="container">
-  <div class="header">
-    <h2>NOVA ADMISSÃO COOPERADO</h2>
-    <p class="subtitle">Cadastro / Admissão do Cooperado / Nova Admissão de Cooperado</p>
-  </div>
 
   <app-progress-stepper [currentStep]="1"></app-progress-stepper>
 
@@ -29,7 +26,7 @@
           <button
             type="submit"
             class="btn-consultar"
-            [disabled]="cpfForm.invalid || loading"
+            [disabled]="cpfForm.invalid"
           >
             Consultar por CPF
           </button>
@@ -41,7 +38,5 @@
     </form>
   </div>
 
-  <div class="footer">
-    <button class="btn-dicas">Dicas para admissão</button>
-  </div>
 </div>
+</main>

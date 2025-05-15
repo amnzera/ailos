@@ -1,4 +1,7 @@
-/* src/app/components/cpf-form/cpf-form.component.scss */
+main{
+  background-color: #f3f9fc;
+  min-height: 75vh;
+}
 .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -6,19 +9,6 @@
   font-family: Arial, sans-serif;
 }
 
-.header {
-  margin-bottom: 20px;
-  h2 {
-    color: #005c8f;
-    margin-bottom: 5px;
-    font-size: 24px;
-  }
-  .subtitle {
-    color: #666;
-    font-size: 14px;
-    margin-top: 0;
-  }
-}
 
 .cpf-form-container {
   background-color: #f3f9fc;
@@ -88,21 +78,3 @@
   }
 }
 
-.footer {
-  text-align: left;
-  margin-top: 30px;
-
-  .btn-dicas {
-    background-color: white;
-    color: #005c8f;
-    border: 1px solid #005c8f;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-
-    &:hover {
-      background-color: #f0f7fc;
-    }
-  }
-}

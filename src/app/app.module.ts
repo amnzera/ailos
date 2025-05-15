@@ -8,7 +8,8 @@ import {UserDetailsComponent} from './components/user-details/user-details.compo
 import {ProgressStepperComponent} from './components/progress-stepper/progress-stepper.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {SidebarComponent} from './components/sidebar/sidebar.component';
-import {NgOptimizedImage} from '@angular/common';
+import {MatIcon} from '@angular/material/icon';
+import {HeaderComponent} from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +17,14 @@ import {NgOptimizedImage} from '@angular/common';
     CpfFormComponent,
     UserDetailsComponent,
     ProgressStepperComponent,
-    SidebarComponent
+    SidebarComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    NgOptimizedImage
+    MatIcon,
   ],
   providers: [],
   bootstrap: [AppComponent]

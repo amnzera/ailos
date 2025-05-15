@@ -1,25 +1,48 @@
 <div class="sidebar">
 <img ngSrc="/assets/img/logo.png" alt="Logo" class="logo" width="268" height="268" priority>
-  <div class="menu-toggle">
-    <div class="hamburger-icon">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-    </div>
-  </div>
 
   <nav class="navigation">
     <ul class="nav-list">
-      <li
-        *ngFor="let item of navItems"
-        class="nav-item"
-        [routerLink]="item.route"
-        routerLinkActive="active"
-      >
+      <li class="nav-item" [routerLink]="'/menu'" routerLinkActive="active">
         <div class="nav-icon">
-          <i [class]="'icon-' + item.icon"></i>
+          <mat-icon>menu</mat-icon>
         </div>
-        <span class="nav-label">{{ item.label }}</span>
+        <span class="nav-label">Menu</span>
+      </li>
+
+      <li class="nav-item" [routerLink]="'/search'" routerLinkActive="active">
+        <div class="nav-icon">
+          <mat-icon>search</mat-icon>
+        </div>
+        <span class="nav-label">Pesquisar</span>
+      </li>
+
+      <li class="nav-item" [routerLink]="'/favorites'" routerLinkActive="active">
+        <div class="nav-icon">
+          <mat-icon>star_border</mat-icon>
+        </div>
+        <span class="nav-label">Favoritos</span>
+      </li>
+
+      <li class="nav-item" [routerLink]="'/messages'" routerLinkActive="active">
+        <div class="nav-icon">
+          <mat-icon>chat_bubble_outline</mat-icon>
+        </div>
+        <span class="nav-label">Mensagens</span>
+      </li>
+
+      <li class="nav-item" [routerLink]="'/list'" routerLinkActive="active">
+        <div class="nav-icon">
+          <mat-icon>filter_list</mat-icon>
+        </div>
+        <span class="nav-label">Lista</span>
+      </li>
+
+      <li class="nav-item" [routerLink]="'/account'" routerLinkActive="active">
+        <div class="nav-icon">
+          <mat-icon>account_balance</mat-icon>
+        </div>
+        <span class="nav-label">Instituição</span>
       </li>
     </ul>
   </nav>
