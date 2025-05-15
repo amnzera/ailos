@@ -1,5 +1,4 @@
-// src/app/components/progress-stepper/progress-stepper.component.ts
-import { Component, Input, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-progress-stepper',

@@ -7,6 +7,7 @@ Este projeto implementa uma aplicação Angular para consulta de CPF com valida�
 1. **Tela de Consulta de CPF:**
   - Formulário para inserção do CPF
   - Validação de CPF (formato e dígitos verificadores)
+  - Use CPF (497.479.310-10) para avançar
   - Exibição de mensagem de erro para CPF inválido
   - Navegação para a segunda tela quando o CPF é válido
 

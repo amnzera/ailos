@@ -9,10 +9,10 @@ export class UserService {
   private userSubject = new BehaviorSubject<User | null>(null);
 
   getUserByCpf(cpf: string): Observable<User | null> {
-    if (cpf.replace(/\D/g, '') === '42386370895') {
+    if (cpf.replace(/\D/g, '') === '49747931010') {
       const user: User = {
         nome: 'Mariane de Sousa Oliveira',
-        cpf: '423.863.708-95',
+        cpf: '497.479.310-10',
         situacaoCadastral: 'Regular',
         contaAplicacao: {
           cooperativa: 'Viacredi',

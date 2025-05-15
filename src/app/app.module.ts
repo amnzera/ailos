@@ -3,8 +3,8 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {CpfFormComponent} from './components/cpf-form/cpf-form.component';
-import {UserDetailsComponent} from './components/user-details/user-details.component';
+import {CpfFormComponent} from './pages/cpf-form/cpf-form.component';
+import {UserDetailsComponent} from './pages/user-details/user-details.component';
 import {ProgressStepperComponent} from './components/progress-stepper/progress-stepper.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {SidebarComponent} from './components/sidebar/sidebar.component';
