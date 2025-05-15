@@ -50,7 +50,7 @@ O projeto está organizado em:
 
 ## Credenciais de Teste
 
-Para testar a aplicação, use o CPF: `111.222.333-44`
+Para testar a aplicação, use o CPF: `497.479.310-10`
 
 ## Critérios de Avaliação
 
